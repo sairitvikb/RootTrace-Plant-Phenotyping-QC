@@ -1,0 +1,69 @@
+{
+  "schema": "roottrace-poc/report-v1",
+  "status": "independent demonstration \u2014 not validated for scientific decision-making",
+  "source": {
+    "filename": "synthetic_traits.csv",
+    "sha256": "a68d3b64b0498e0e840dd5dc8b417f532ad7201436feb21d923b7675a01aed27"
+  },
+  "analysis": {
+    "tool": "roottrace",
+    "version": "0.1.0",
+    "jump_pct": 35.0,
+    "min_history": 3,
+    "lateral_delta_threshold": 4,
+    "robust_outlier_threshold": "6 * 1.4826 * MAD"
+  },
+  "summary": {
+    "rows": 36,
+    "plants": 3,
+    "flagged_events": 5,
+    "flagged_frames": 4
+  },
+  "flags": [
+    {
+      "plant_name": "canola-demo-02",
+      "frame_idx": 7,
+      "rule": "abrupt_primary_length_change",
+      "severity": "review",
+      "detail": "Primary length changed 62.5% vs preceding frame (threshold 35.0%).",
+      "observed": 195.0,
+      "previous": 120.0
+    },
+    {
+      "plant_name": "canola-demo-02",
+      "frame_idx": 7,
+      "rule": "local_robust_outlier",
+      "severity": "review",
+      "detail": "Length is >6 robust standard deviations from recent-frame median.",
+      "observed": 195.0,
+      "previous": 120.0
+    },
+    {
+      "plant_name": "canola-demo-02",
+      "frame_idx": 8,
+      "rule": "abrupt_primary_length_change",
+      "severity": "review",
+      "detail": "Primary length changed 35.4% vs preceding frame (threshold 35.0%).",
+      "observed": 126.0,
+      "previous": 195.0
+    },
+    {
+      "plant_name": "canola-demo-03",
+      "frame_idx": 9,
+      "rule": "lateral_count_change",
+      "severity": "review",
+      "detail": "Lateral count changed by 5 roots (threshold 4).",
+      "observed": 9,
+      "previous": 4
+    },
+    {
+      "plant_name": "canola-demo-03",
+      "frame_idx": 10,
+      "rule": "lateral_count_change",
+      "severity": "review",
+      "detail": "Lateral count changed by 5 roots (threshold 4).",
+      "observed": 4,
+      "previous": 9
+    }
+  ]
+}

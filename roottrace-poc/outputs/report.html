@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>RootTrace Quality Report</title><style>
+body{font-family:system-ui,sans-serif;max-width:1080px;margin:40px auto;padding:0 20px;color:#18302b}
+h1{color:#126e56} .small{color:#52645f} .metric{display:inline-block;margin:12px 22px 20px 0;
+background:#e9f5ef;padding:20px;border-radius:10px} table{border-collapse:collapse;width:100%}
+th,td{padding:12px;text-align:left;border-bottom:1px solid #d8e6df}th{background:#e9f5ef}
+</style></head><body><h1>RootTrace — Trait Quality Report</h1>
+<p class="small">Independent prototype · synthetic-data demonstration · review flags are not diagnoses</p>
+<div class="metric"><b>3</b> plants</div><div class="metric"><b>36</b> observations</div><div class="metric"><b>4</b> flagged frames</div><h2>Events to review</h2><table><thead><tr><th>Plant</th><th>Frame</th><th>Rule</th><th>Explanation</th></tr></thead><tbody><tr><td>canola-demo-02</td><td>7</td><td>abrupt_primary_length_change</td><td>Primary length changed 62.5% vs preceding frame (threshold 35.0%).</td></tr><tr><td>canola-demo-02</td><td>7</td><td>local_robust_outlier</td><td>Length is &gt;6 robust standard deviations from recent-frame median.</td></tr><tr><td>canola-demo-02</td><td>8</td><td>abrupt_primary_length_change</td><td>Primary length changed 35.4% vs preceding frame (threshold 35.0%).</td></tr><tr><td>canola-demo-03</td><td>9</td><td>lateral_count_change</td><td>Lateral count changed by 5 roots (threshold 4).</td></tr><tr><td>canola-demo-03</td><td>10</td><td>lateral_count_change</td><td>Lateral count changed by 5 roots (threshold 4).</td></tr></tbody></table><h2>Reproducibility record</h2><pre>{
+  &quot;source&quot;: {
+    &quot;filename&quot;: &quot;synthetic_traits.csv&quot;,
+    &quot;sha256&quot;: &quot;a68d3b64b0498e0e840dd5dc8b417f532ad7201436feb21d923b7675a01aed27&quot;
+  },
+  &quot;analysis&quot;: {
+    &quot;tool&quot;: &quot;roottrace&quot;,
+    &quot;version&quot;: &quot;0.1.0&quot;,
+    &quot;jump_pct&quot;: 35.0,
+    &quot;min_history&quot;: 3,
+    &quot;lateral_delta_threshold&quot;: 4,
+    &quot;robust_outlier_threshold&quot;: &quot;6 * 1.4826 * MAD&quot;
+  }
+}</pre></body></html>
